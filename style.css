@@ -1,0 +1,38 @@
+body {
+  background-color: #fff8e7;
+  font-family: sans-serif;
+}
+.container {
+  width: 100%;
+}
+.wrapper div{
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+}
+.wrapper{
+  display: inline-block;
+  margin: 0 auto;
+}
+body div p{
+  font-size: 20px;
+  text-align: center;
+}
+#spin1 .done{
+  color: #66BDB5;
+}
+#spin2 .done{
+  color: #EA5962;
+}
+#spin3 .done{
+  color: #53317A;
+}
+.container button{
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #3aa8af;
+  padding: 15px 40px;
+  color: white;
+}
