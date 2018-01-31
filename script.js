@@ -25,6 +25,7 @@ function start () {
 };
 
 function activate () {
+  $('#container').fadeOut(500)
   console.log('click')
   spin()
   onClick()
@@ -32,17 +33,15 @@ function activate () {
 
 function spin () {
   let randomNumberSpin = randomNum(0, 13)
-  // const spin1 = document.getElementById('spin1')
   setDeceleratingTimeout(function (c, className) { $('#spin1').html(`<p class=${className}>${spinnerArr[c]}</p>`) }, 5, (50 + randomNumberSpin))
-  // $('#spin1').html(`<h1>${spinnerArr[randomNumberSpin]}</h1>`)
 }
+
 // thanks to: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript#7228322
 function randomNum (min, max) {
-  console.log(max)
   let randomNumber = Math.floor(Math.random() * (max - min + 1) + min)
-  console.log(randomNumber)
   return randomNumber
 }
+
 // thanks to: https://stackoverflow.com/questions/1280263/changing-the-interval-of-setinterval-while-its-running
 function setDeceleratingTimeout (callback, factor, times) {
   let c = 0
@@ -60,10 +59,7 @@ function setDeceleratingTimeout (callback, factor, times) {
         callback(c, 'done')
         const container = document.getElementById('container')
         $('#container').fadeIn(1000)
-        //     let cssContainer = 'visibility: visible;'
-        // container.setAttribute(
-        //   'style', cssContainer
-        // )
+        $('#spinButton').html('SPIN AGAIN')
       }
     }
   }(times, 0)
@@ -81,7 +77,7 @@ function onClick () {
 
   wheel.removeAttribute('style')
 
-  deg = 4000
+  deg = 4000 + deg
 
   var css = '-webkit-transform: rotate(' + deg + 'deg);'
 
