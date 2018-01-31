@@ -1,6 +1,7 @@
 body {
   background-color: #ffffff;
   font-family: sans-serif;
+  height: 1000px;
 }
 body h1{
   font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,7 @@ body p{
 }
 button{
   display: block;
-  margin: 0 auto;
+  margin: 50px auto;
   border: none;
   border-radius: 10px;
   background-color: #3aa8af;
@@ -22,21 +23,66 @@ button{
   font-size: 25px;
 }
 
+.spinner{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
 
 /* thanks to https://codepen.io/thebabydino/pen/hkxGp */
 #rainbow-wheel {
+  display: block;
 position: relative;
-margin: 1em auto;
-border: solid 2em white;
-width: 45%;
-height: 0;
-padding-bottom: 45%;
+/* margin: 1em auto; */
+/* border: solid 2em white; */
 border-radius: 50%;
-background-image: url('./assets/spin-wheel.png');
-background-color: white;
-background-size: 100%;
-transition: 5s;
-text-align: left;
+background-image: url('./assets/double-hearts.png');
+height: 100%;
+width: 100%;
+background-color: #F4F2ED;
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center;
+transition: 8s;
+text-align: center;
+z-index: -10;
+padding: 0;
+margin: 0;
+
+}
+
+#spin1 {
+  position: relative;
+  display: inline;
+  width: 200px;
+  height: 200px;
+  z-index: 20;
+  font-size: 25px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  top: -313px;
+      left: 87px;
+  display: table-cell;
+      vertical-align: middle;
+      padding: 10px;
+}
+#spin1 p{
+  margin: 0 auto;
+  padding: 0px;
+  /* width: 200px;
+  height: 200px; */
+  text-align: center;
+  vertical-align: middle;
+  z-index: 200;
+}
+
+#container{
+  padding: 3em;
+  display: none;
 }
 
 .p1 {
